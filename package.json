@@ -1,0 +1,26 @@
+{
+  "name": "lumasearch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Find public upcoming Luma events by city",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.js",
+    "preview": "node scripts/preview.js",
+    "test": "node --test __tests__/*.test.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/figtree": "5.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.0.4",
+    "vite": "8.3.0"
+  }
+}
