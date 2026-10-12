@@ -62,6 +62,20 @@ Vercel's [Hobby plan](https://vercel.com/docs/plans/hobby) is free within its
 included limits for personal, non-commercial projects. Open-Meteo's free
 geocoding service also requires non-commercial use.
 
+## API protection
+
+Vercel's edge firewall limits `/api/*` to 60 requests per minute per IP,
+shared by city lookups and event searches. The policy is recorded in
+[`security/firewall.json`](security/firewall.json). It was applied to the
+existing project through Vercel's Firewall API on 11 October 2026. Editing this
+file does not apply the policy automatically; firewall changes must also be
+applied through Vercel's dashboard or API.
+
+Deployments currently still use the GitHub Actions secret described above.
+Migration to Vercel's native GitHub integration and removal of that credential
+are pending the Vercel account's GitHub login connection. Keep the working
+deployment credential until the replacement has been verified.
+
 ## Data and coverage
 
 City coordinates come from [Open-Meteo / GeoNames](https://open-meteo.com/en/docs/geocoding-api).
